@@ -1,0 +1,21 @@
+{
+    "__version": "1",
+    "www.site.com": [
+        {
+            "if-site-path": "/sw.js",
+            "pipeline": "Static-File",
+            "params": {
+                "path": "/examples/js/service-worker.js",
+                "content-type": "text/javascript"
+            }
+        },
+        {
+            "if-site-path": "/.well-known/assetlinks.json",
+            "pipeline": "Static-File",
+            "params": {
+                "path": "/examples/json/assetlinks.json",
+                "content-type": "application/json"
+            }
+        }
+    ]
+}
