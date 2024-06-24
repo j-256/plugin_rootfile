@@ -1,6 +1,7 @@
 {
     "__version": "1",
     "www.site.com": [
+        {/* Need at least one entry without if-site-path or the first will be prepended to every URL */},
         {
             "if-site-path": "/sw.js",
             "pipeline": "Static-File",
