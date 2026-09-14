@@ -1,0 +1,14 @@
+{
+  "name": "plugin-rootfile-development",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "capture:cover": "node scripts/capture-cover.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
