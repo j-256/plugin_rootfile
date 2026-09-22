@@ -26,7 +26,7 @@ try {
     path, text: await readFile(new URL(path, root), 'utf8'),
   })));
   browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 4 });
   await page.route('**/*', (route) => route.abort());
   await page.setContent(`<!doctype html><html lang="en"><head><meta charset="utf-8"><title>plugin_rootfile - cartridge source</title>
     <style>body{margin:0;background:#14171c;color:#d9dfe6;font:18px/1.6 Menlo,monospace}main{padding:36px 44px}header{font-size:23px;margin-bottom:28px;color:#f4f6f8}.path{color:#8fbcbb}section{border-top:1px solid #343b45;padding-top:18px;margin-top:26px}pre{margin:10px 0;white-space:pre-wrap;overflow-wrap:anywhere;font:15px/1.5 Menlo,monospace}h1{font-size:24px;margin:0 0 8px}p{color:#aab4bf;margin:0 0 18px;font-size:16px}.layout{display:grid;grid-template-columns:1fr 1.05fr;gap:42px}.prompt{color:#a3be8c}</style>
